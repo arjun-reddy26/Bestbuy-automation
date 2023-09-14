@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Best Buy Automation">
+	<test thread-count="5" name="Add Multiple products in cart">
+		<parameter name="testDataFileName"
+			value="BestBuy-Multiple-Products-Test-Data.xlsx"></parameter>
+		<classes>
+			<class name="bba.runner.BBARunner" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Add Single product in cart">
+		<parameter name="testDataFileName"
+			value="BestBuy-Single-Product-Test-Data.xlsx"></parameter>
+		<classes>
+			<class name="bba.runner.BBARunner" />
+		</classes>
+	</test>
+</suite> <!--
+Suite -->
