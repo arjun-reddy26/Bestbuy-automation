@@ -33,7 +33,9 @@ public class OrderProductStepsDefinitions {
 	
 	@Before
 	public void setup() throws Exception {
+		// Lower the chrome version if it is getting failed
 		driver = new ChromeDriver();
+		// driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		// Setting the implicit wait with 60 seconds.
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
