@@ -59,7 +59,6 @@ public class OrderProductStepsDefinitions {
 	@Given("User is on the Best buy home page")
 	public void launchApplication() {
 		driver.get("https://www.bestbuy.com");
-		driver.findElement(By.cssSelector("div[class='country-selection'] a[class='us-link']")).click();
 	}
 
 	@When("User adds the product")
