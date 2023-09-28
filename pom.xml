@@ -1,35 +1,47 @@
-<project xmlns="https://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>Best-Buy-Automation</groupId>
-	<artifactId>bestbuy.automation</artifactId>
+	<groupId>Automation_test_for_best_buy</groupId>
+	<artifactId>Automation_test_for_best_buy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Best-Buy-Automation</name>
-	<description>Project to automate the best buy application to order products</description>
+
+
 	<dependencies>
+		<!-- Selenium WebDriver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.12.1</version>
+			<version>3.141.59</version> <!-- Replace with the latest version -->
 		</dependency>
+
+		<!-- Cucumber dependencies -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.13.0</version>
+			<version>6.11.0</version> <!-- Replace with the latest version -->
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
-			<version>7.14.0</version>
+			<version>6.11.0</version> <!-- Replace with the latest version -->
 		</dependency>
+
+		<!-- TestNG -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.8.0</version>
-			<scope>test</scope>
+			<version>7.4.0</version> <!-- Replace with the latest version -->
+		</dependency>
+
+		<!-- Apache POI for Excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version> <!-- Replace with the latest version -->
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -39,7 +51,7 @@
 				<configuration>
 					<reportsDirectory>${basedir}/test-output</reportsDirectory>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/runners/test.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -56,4 +68,5 @@
 
 		</plugins>
 	</build>
+
 </project>
